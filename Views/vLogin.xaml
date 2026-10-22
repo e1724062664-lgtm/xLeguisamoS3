@@ -3,6 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xLeguisamoS3.Views.vLogin"
              Title="vLogin">
+
+    <ContentPage.Resources>
+        <Style x:Key="EstiloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="Aqua"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+    
+        <Style x:Key="EstiloButton" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="Background" Value="Green"/>
+        </Style>
+    </ContentPage.Resources>
+
     <VerticalStackLayout
         Margin="20"
         Padding="20"
@@ -32,6 +47,7 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="USUARIO"
+                   Style="{StaticResource EstiloLabel}"
                    FontSize="18"
                    Grid.Row="0"
                    Grid.Column="0"/>
@@ -42,6 +58,7 @@
                    Grid.Column="1"/>
 
             <Label Text="CONTRASEÑA"
+                   Style="{StaticResource EstiloLabel}"
                    FontSize="18"
                    Grid.Row="1"
                    Grid.Column="0"/>
@@ -54,10 +71,12 @@
 
             <Button x:Name="btnIniciarSesión"
                     Text="Iniciar Sesión"
+                    Style="{StaticResource GobalBotones}"
                     Clicked="btnIniciarSesión_Clicked"
                     Grid.Row="2"
                     Grid.Column="0"/>
             <Button x:Name="btnRegistrar"
+                    Style="{StaticResource EstiloButton}"
                     Text="Registrar Usuario"
                     Clicked="btnRegistrar_Clicked"
                     Grid.Row="2"
